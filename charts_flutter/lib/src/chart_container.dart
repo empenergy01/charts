@@ -15,17 +15,17 @@
 
 import 'package:charts_common/common.dart' as common
     show
-        A11yNode,
-        AxisDirection,
-        BaseChart,
-        ChartContext,
-        DateTimeFactory,
-        LocalDateTimeFactory,
-        ProxyGestureListener,
-        RTLSpec,
-        SelectionModelType,
-        Series,
-        Performance;
+    A11yNode,
+    AxisDirection,
+    BaseChart,
+    ChartContext,
+    DateTimeFactory,
+    LocalDateTimeFactory,
+    ProxyGestureListener,
+    RTLSpec,
+    SelectionModelType,
+    Series,
+    Performance;
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/scheduler.dart';
@@ -49,12 +49,12 @@ class ChartContainer<D> extends CustomPaint {
 
   ChartContainer(
       {this.oldChartWidget,
-      required this.chartWidget,
-      required this.chartState,
-      required this.animationValue,
-      required this.rtl,
-      this.rtlSpec,
-      this.userManagedState});
+        required this.chartWidget,
+        required this.chartState,
+        required this.animationValue,
+        required this.rtl,
+        this.rtlSpec,
+        this.userManagedState});
 
   @override
   RenderCustomPaint createRenderObject(BuildContext context) {
@@ -94,7 +94,7 @@ class ChartContainerRenderObject<D> extends RenderCustomPaint
   DateTime? _lastConfigurationChangeTime;
 
   /// The minimum time required before the next configuration change.
-  static const configurationChangeThresholdMs = 500;
+  static const configurationChangeThresholdMs = 10;
 
   void reconfigure(ChartContainer<D> config, BuildContext context) {
     _chartState = config.chartState;
@@ -131,7 +131,7 @@ class ChartContainerRenderObject<D> extends RenderCustomPaint
     if (_chartState.chartIsDirty) {
       final currentTime = DateTime.now();
       final lastConfigurationBelowThreshold = _lastConfigurationChangeTime !=
-              null &&
+          null &&
           currentTime.difference(_lastConfigurationChangeTime!).inMilliseconds <
               configurationChangeThresholdMs;
 
@@ -141,9 +141,9 @@ class ChartContainerRenderObject<D> extends RenderCustomPaint
         _chartState.resetChartDirtyFlag();
         _log.warning(
             'Chart configuration is changing more frequent than threshold'
-            ' of $configurationChangeThresholdMs. Check if your behavior, axis,'
-            ' or renderer config is missing equality checks that may be causing'
-            ' configuration to be detected as changed. ');
+                ' of $configurationChangeThresholdMs. Check if your behavior, axis,'
+                ' or renderer config is missing equality checks that may be causing'
+                ' configuration to be detected as changed. ');
       }
     }
 
@@ -198,7 +198,7 @@ class ChartContainerRenderObject<D> extends RenderCustomPaint
       final model = _chart!.getSelectionModel(type);
 
       final userModel =
-          newState.selectionModels[type]!.getModel(_chart!.currentSeriesList);
+      newState.selectionModels[type]!.getModel(_chart!.currentSeriesList);
 
       if (model != userModel) {
         model.updateSelection(
@@ -298,8 +298,8 @@ class ChartContainerRenderObject<D> extends RenderCustomPaint
   @override
   bool get isRtl =>
       _chartContainerIsRtl &&
-      (_rtlSpec == null ||
-          _rtlSpec?.axisDirection == common.AxisDirection.reversed);
+          (_rtlSpec == null ||
+              _rtlSpec?.axisDirection == common.AxisDirection.reversed);
 
   @override
   bool get isTappable => _chart!.isTappable;
@@ -354,10 +354,10 @@ class ChartContainerCustomPaint extends CustomPainter {
 
   factory ChartContainerCustomPaint(
       {ChartContainerCustomPaint? oldPainter,
-      required common.BaseChart chart,
-      bool exploreMode = false,
-      List<common.A11yNode> a11yNodes = const [],
-      TextDirection textDirection = TextDirection.ltr}) {
+        required common.BaseChart chart,
+        bool exploreMode = false,
+        List<common.A11yNode> a11yNodes = const [],
+        TextDirection textDirection = TextDirection.ltr}) {
     if (oldPainter != null &&
         oldPainter.exploreMode == exploreMode &&
         oldPainter.a11yNodes == a11yNodes &&
@@ -374,9 +374,9 @@ class ChartContainerCustomPaint extends CustomPainter {
 
   ChartContainerCustomPaint._internal(
       {required this.chart,
-      required this.exploreMode,
-      required this.a11yNodes,
-      required this.textDirection});
+        required this.exploreMode,
+        required this.a11yNodes,
+        required this.textDirection});
 
   @override
   void paint(Canvas canvas, Size size) {

@@ -16,6 +16,7 @@
 import 'dart:math' show Point, Rectangle;
 import 'package:flutter/material.dart';
 import 'package:charts_common/common.dart' as common show Color;
+import 'package:charts_flutter/src/util/monotonex.dart';
 
 /// Draws a simple line.
 ///
@@ -32,12 +33,13 @@ class PolygonPainter {
   /// equivalent to "1,2,3,1,2,3."
   static void draw(
       {required Canvas canvas,
-      required Paint paint,
-      required List<Point> points,
-      Rectangle<num>? clipBounds,
-      common.Color? fill,
-      common.Color? stroke,
-      double? strokeWidthPx}) {
+        required Paint paint,
+        required List<Point> points,
+        Rectangle<num>? clipBounds,
+        common.Color? fill,
+        common.Color? stroke,
+        double? strokeWidthPx,
+        bool? smoothLine}) {
     if (points.isEmpty) {
       return;
     }
@@ -77,7 +79,10 @@ class PolygonPainter {
         paint.style = PaintingStyle.stroke;
       }
 
-      if (fillColor != null) {
+      // TODO make configurable
+      var fillGradient = true;
+
+      if (fillColor != null && !fillGradient) {
         paint.color = fillColor;
         paint.style = PaintingStyle.fill;
       }
@@ -85,11 +90,55 @@ class PolygonPainter {
       final path = new Path()
         ..moveTo(points.first.x.toDouble(), points.first.y.toDouble());
 
-      for (var point in points) {
-        path.lineTo(point.x.toDouble(), point.y.toDouble());
+      if (smoothLine!) {
+        if (points[0].y == points[1].y && points[1].x == points[2].x) {
+          path.moveTo(points.last.x.toDouble(), points.last.y.toDouble());
+          path.lineTo(points[0].x.toDouble(), points[0].y.toDouble());
+          path.lineTo(points[1].x.toDouble(), points[1].y.toDouble());
+          path.lineTo(points[2].x.toDouble(), points[2].y.toDouble());
+          MonotoneX.addCurve(path,points.sublist(2));
+        } else {
+          path.moveTo(points.last.x.toDouble(), points.last.y.toDouble());
+          path.lineTo(points[0].x.toDouble(), points[0].y.toDouble());
+
+          MonotoneX.addCurve(path,
+              points.sublist(0, points.length ~/ 2).reversed.toList(), true);
+          path.lineTo(points[points.length ~/ 2].x.toDouble(),
+              points[points.length ~/ 2].y.toDouble());
+
+          MonotoneX.addCurve(path, points.sublist(points.length ~/ 2));
+
+          path.lineTo(points.last.x.toDouble(), points.last.y.toDouble());
+        }
+      } else {
+        path.moveTo(points.first.x.toDouble(), points.first.y.toDouble());
+        for (var point in points) {
+          path.lineTo(point.x.toDouble(), point.y.toDouble());
+        }
       }
 
-      canvas.drawPath(path, paint);
+      Color fillTemp;
+      if (fill != null){
+        fillTemp = new Color.fromARGB(255, fill.r, fill.g, fill.b);
+      } else {
+        fillTemp = Color.fromARGB(255, 255, 255, 255);
+      }
+
+      if (fillGradient) {
+        var gradient = new LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              fillTemp,
+              new Color.fromARGB(255, 255, 255, 255)
+            ]);
+        paint.shader = gradient.createShader(path.getBounds());
+        paint.style = PaintingStyle.fill;
+        canvas.drawPath(path, paint);
+        paint.shader = null;
+      } else {
+        canvas.drawPath(path, paint);
+      }
     }
 
     if (clipBounds != null) {

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2742a087-2b77-43fe-b886-756787d68da4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/charts_flutter/lib/src/util/monotonex.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts_common/lib/src/chart/common/chart_canvas.dart" beforeDir="false" afterPath="$PROJECT_DIR$/charts_common/lib/src/chart/common/chart_canvas.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts_common/lib/src/chart/line/line_renderer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/charts_common/lib/src/chart/line/line_renderer.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts_common/lib/src/chart/line/line_renderer_config.dart" beforeDir="false" afterPath="$PROJECT_DIR$/charts_common/lib/src/chart/line/line_renderer_config.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts_common/test/chart/bar/bar_target_line_renderer_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/charts_common/test/chart/bar/bar_target_line_renderer_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts_flutter/lib/src/canvas/line_painter.dart" beforeDir="false" afterPath="$PROJECT_DIR$/charts_flutter/lib/src/canvas/line_painter.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts_flutter/lib/src/canvas/polygon_painter.dart" beforeDir="false" afterPath="$PROJECT_DIR$/charts_flutter/lib/src/canvas/polygon_painter.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts_flutter/lib/src/chart_canvas.dart" beforeDir="false" afterPath="$PROJECT_DIR$/charts_flutter/lib/src/chart_canvas.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts_flutter/lib/src/chart_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/charts_flutter/lib/src/chart_container.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/charts_flutter/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/charts_flutter/pubspec.yaml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1xxnPfe63XZUYuYbgszK2F34OQa" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2742a087-2b77-43fe-b886-756787d68da4" name="Default Changelist" comment="" />
+      <created>1631305584650</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1631305584650</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:/Users/lkettwig/Projects/newchart/charts" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="1" value="TOOL_WINDOW" />
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="667" y="377" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1631308695083">
+      <screen x="0" y="23" width="2560" height="1341" />
+    </state>
+    <state x="667" y="377" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.2560.1341@0.23.2560.1341" timestamp="1631308695083" />
+    <state x="284" y="98" width="1739" height="1014" key="DiffContextDialog" timestamp="1631674723017">
+      <screen x="0" y="23" width="2560" height="1341" />
+    </state>
+    <state x="284" y="98" width="1739" height="1014" key="DiffContextDialog/0.23.2560.1341@0.23.2560.1341" timestamp="1631674723017" />
+    <state x="734" y="390" key="RollbackChangesDialog" timestamp="1631469858535">
+      <screen x="0" y="23" width="2560" height="1341" />
+    </state>
+    <state x="734" y="390" key="RollbackChangesDialog/0.23.2560.1341@0.23.2560.1341" timestamp="1631469858535" />
+    <state x="971" y="429" key="VcsDiffUtil.ChangesDialog" timestamp="1631674438680">
+      <screen x="0" y="23" width="2560" height="1341" />
+    </state>
+    <state x="971" y="429" key="VcsDiffUtil.ChangesDialog/0.23.2560.1341@0.23.2560.1341" timestamp="1631674438680" />
+    <state x="580" y="161" width="1739" height="1014" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1631567613655">
+      <screen x="0" y="23" width="2560" height="1341" />
+    </state>
+    <state x="580" y="161" width="1739" height="1014" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.23.2560.1341@0.23.2560.1341" timestamp="1631567613655" />
+    <state x="764" y="461" width="622" height="490" key="find.popup" timestamp="1631675382812">
+      <screen x="0" y="23" width="2560" height="1341" />
+    </state>
+    <state x="764" y="461" width="622" height="490" key="find.popup/0.23.2560.1341@0.23.2560.1341" timestamp="1631675382812" />
+    <state x="735" y="373" width="670" height="676" key="search.everywhere.popup" timestamp="1631632654815">
+      <screen x="0" y="23" width="2560" height="1341" />
+    </state>
+    <state x="735" y="373" width="670" height="676" key="search.everywhere.popup/0.23.2560.1341@0.23.2560.1341" timestamp="1631632654815" />
+  </component>
+</project>

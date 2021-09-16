@@ -54,12 +54,13 @@ abstract class ChartCanvas {
   /// equivalent to "1,2,3,1,2,3."
   void drawLine(
       {required List<Point> points,
-      Rectangle<num>? clipBounds,
-      Color? fill,
-      Color? stroke,
-      bool? roundEndCaps,
-      double? strokeWidthPx,
-      List<int>? dashPattern});
+        Rectangle<num>? clipBounds,
+        Color? fill,
+        Color? stroke,
+        bool smoothLine,
+        bool? roundEndCaps,
+        double? strokeWidthPx,
+        List<int>? dashPattern});
 
   /// Renders a pie, with an optional hole in the center.
   void drawPie(CanvasPie canvasPie);
@@ -79,11 +80,11 @@ abstract class ChartCanvas {
   /// [blendMode] Blend mode to be used when drawing this point on canvas.
   void drawPoint(
       {required Point point,
-      required double radius,
-      Color? fill,
-      Color? stroke,
-      double? strokeWidthPx,
-      BlendMode? blendMode});
+        required double radius,
+        Color? fill,
+        Color? stroke,
+        double? strokeWidthPx,
+        BlendMode? blendMode});
 
   /// Renders a polygon shape described by a set of points.
   ///
@@ -97,10 +98,11 @@ abstract class ChartCanvas {
   /// edges of the polygon. Both must be provided together for a line to appear.
   void drawPolygon(
       {required List<Point> points,
-      Rectangle<num>? clipBounds,
-      Color? fill,
-      Color? stroke,
-      double? strokeWidthPx});
+        Rectangle<num>? clipBounds,
+        Color? fill,
+        Color? stroke,
+        double? strokeWidthPx,
+        bool smoothLine,});
 
   /// Renders a simple rectangle.
   ///
@@ -110,23 +112,23 @@ abstract class ChartCanvas {
   /// with anything exceeding the x pixels to be transparent.
   void drawRect(Rectangle<num> bounds,
       {Color? fill,
-      Color? stroke,
-      double? strokeWidthPx,
-      Rectangle<num>? drawAreaBounds});
+        Color? stroke,
+        double? strokeWidthPx,
+        Rectangle<num>? drawAreaBounds});
 
   /// Renders a rounded rectangle.
   void drawRRect(Rectangle<num> bounds,
       {Color? fill,
-      Color? stroke,
-      Color? patternColor,
-      FillPatternType? fillPattern,
-      double? patternStrokeWidthPx,
-      double? strokeWidthPx,
-      num? radius,
-      bool roundTopLeft = false,
-      bool roundTopRight = false,
-      bool roundBottomLeft = false,
-      bool roundBottomRight = false});
+        Color? stroke,
+        Color? patternColor,
+        FillPatternType? fillPattern,
+        double? patternStrokeWidthPx,
+        double? strokeWidthPx,
+        num? radius,
+        bool roundTopLeft = false,
+        bool roundTopRight = false,
+        bool roundBottomLeft = false,
+        bool roundBottomRight = false});
 
   /// Renders a stack of bars, rounding the last bar in the stack.
   ///
@@ -167,7 +169,7 @@ Color getAnimatedColor(Color previous, Color target, double animationPercent) {
 ///   on top of a bar filled with the fill color.
 /// * [solid] defines a simple bar filled with the fill color. This is the
 ///   default pattern for bars.
-enum FillPatternType { forwardHatch, solid }
+enum FillPatternType { forwardHatch, solid, gradient}
 
 /// Defines the blend modes to use for drawing on canvas.
 enum BlendMode {

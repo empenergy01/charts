@@ -70,22 +70,26 @@ class LineRendererConfig<D> extends LayoutViewConfig
   /// Configures the opacity of the area skirt on the chart.
   final double areaOpacity;
 
+  /// Draw smooth line in Line Chart
+  final bool smoothLine;
+
   /// Whether lines should have round end caps, or square if false.
   final bool roundEndCaps;
 
   LineRendererConfig(
       {this.customRendererId,
-      this.radiusPx = 3.5,
-      this.stacked = false,
-      this.strokeWidthPx = 2.0,
-      this.dashPattern,
-      this.includeLine = true,
-      this.includePoints = false,
-      this.includeArea = false,
-      this.layoutPaintOrder = LayoutViewPaintOrder.line,
-      this.areaOpacity = 0.1,
-      this.roundEndCaps = false,
-      SymbolRenderer? symbolRenderer})
+        this.radiusPx = 3.5,
+        this.stacked = false,
+        this.strokeWidthPx = 2.0,
+        this.dashPattern,
+        this.includeLine = true,
+        this.includePoints = false,
+        this.includeArea = false,
+        this.layoutPaintOrder = LayoutViewPaintOrder.line,
+        this.areaOpacity = 0.1,
+        this.smoothLine = false,
+        this.roundEndCaps = false,
+        SymbolRenderer? symbolRenderer})
       : symbolRenderer = symbolRenderer ?? LineSymbolRenderer();
 
   @override
