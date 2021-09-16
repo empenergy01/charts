@@ -11,15 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2742a087-2b77-43fe-b886-756787d68da4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/charts_flutter/lib/src/util/monotonex.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/charts_common/lib/src/chart/common/chart_canvas.dart" beforeDir="false" afterPath="$PROJECT_DIR$/charts_common/lib/src/chart/common/chart_canvas.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/charts_common/lib/src/chart/line/line_renderer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/charts_common/lib/src/chart/line/line_renderer.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/charts_common/lib/src/chart/line/line_renderer_config.dart" beforeDir="false" afterPath="$PROJECT_DIR$/charts_common/lib/src/chart/line/line_renderer_config.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/charts_common/test/chart/bar/bar_target_line_renderer_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/charts_common/test/chart/bar/bar_target_line_renderer_test.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/charts_flutter/lib/src/canvas/line_painter.dart" beforeDir="false" afterPath="$PROJECT_DIR$/charts_flutter/lib/src/canvas/line_painter.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/charts_flutter/lib/src/canvas/polygon_painter.dart" beforeDir="false" afterPath="$PROJECT_DIR$/charts_flutter/lib/src/canvas/polygon_painter.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/charts_flutter/lib/src/chart_canvas.dart" beforeDir="false" afterPath="$PROJECT_DIR$/charts_flutter/lib/src/chart_canvas.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/charts_flutter/lib/src/chart_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/charts_flutter/lib/src/chart_container.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/charts_flutter/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/charts_flutter/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,10 +99,10 @@
       <screen x="0" y="23" width="2560" height="1341" />
     </state>
     <state x="667" y="377" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.2560.1341@0.23.2560.1341" timestamp="1631308695083" />
-    <state x="284" y="98" width="1739" height="1014" key="DiffContextDialog" timestamp="1631674723017">
+    <state x="284" y="98" width="1739" height="1014" key="DiffContextDialog" timestamp="1631817284976">
       <screen x="0" y="23" width="2560" height="1341" />
     </state>
-    <state x="284" y="98" width="1739" height="1014" key="DiffContextDialog/0.23.2560.1341@0.23.2560.1341" timestamp="1631674723017" />
+    <state x="284" y="98" width="1739" height="1014" key="DiffContextDialog/0.23.2560.1341@0.23.2560.1341" timestamp="1631817284976" />
     <state x="734" y="390" key="RollbackChangesDialog" timestamp="1631469858535">
       <screen x="0" y="23" width="2560" height="1341" />
     </state>
